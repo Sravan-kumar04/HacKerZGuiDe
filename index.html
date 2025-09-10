@@ -5,19 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="HackeRZGuide - Your go-to resource for hacking, coding, and tech guides.">
-    <link rel="icon" href="./img/HACKERZGUIDE.png">
+    <link rel="icon" href="./public/img/HACKERZGUIDE.png">
     <title>HackeRZGuide - Futuristic Tech Hub</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 
     <link rel="stylesheet" href="src/assets/CSS/style.css">
-
-     <link rel="stylesheet" href="chatbot.css">
-
-
-    <link rel="stylesheet" href="chatbot.css">
-
-
+    <link rel="stylesheet" href="src/assets/CSS/chatbot.css">
 
     <script defer src="src/assets/JS/script.js"></script>
 </head>
@@ -70,7 +64,7 @@
 
 
                 <div class="mobile-right-section">
-                    <button class="contribute-btn" onclick="window.location.href='resources.html'">Contribute</button>
+                    <button class="contribute-btn" onclick="window.location.href='src/pages/resources.html'">Contribute</button>
                     <div class="search-bar">
                         <input type="text" placeholder="Search..." aria-label="Search">
                     </div>
@@ -448,7 +442,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 HackerZGuide. All Rights Reserved. | <a href="pp.html">Privacy Policy</a> | <a
+            <p>&copy; 2025 HackerZGuide. All Rights Reserved. | <a href="src/others/pp.html">Privacy Policy</a> | <a
                     href="src/others/t&c.html">Terms & Conditions</a></p>
             </p>
         </div>
@@ -483,87 +477,7 @@
         </div>
     </div>
 
-    <style>
-        /* 🌟 Light Theme */
-        #chatbot-window.light-mode {
-            background: #fff;
-            color: #000;
-        }
-
-        #chatbot-window.light-mode .chatbot-header {
-            background: linear-gradient(135deg, #007bff, #00d4ff);
-            color: #fff;
-        }
-
-        #chatbot-window.light-mode #chatbot-messages {
-            background: #f9f9f9;
-        }
-
-        #chatbot-window.light-mode .bot-msg {
-            background: #e6e6e6;
-            color: #000;
-        }
-
-        #chatbot-window.light-mode .user-msg {
-            background: #007bff;
-            color: #fff;
-        }
-
-        /* 🌟 Dark Theme */
-        #chatbot-window.dark-mode {
-            background: #1e1e1e;
-            color: #f5f5f5;
-        }
-
-        #chatbot-window.dark-mode .chatbot-header {
-            background: linear-gradient(135deg, #222, #444);
-            color: #fff;
-        }
-
-        #chatbot-window.dark-mode #chatbot-messages {
-            background: #2a2a2a;
-        }
-
-        #chatbot-window.dark-mode .bot-msg {
-            background: #333;
-            color: #f5f5f5;
-        }
-
-        #chatbot-window.dark-mode .user-msg {
-            background: #007bff;
-            color: #fff;
-        }
-    </style>
-
-    <script>
-        function toggleTheme() {
-            const chatbot = document.getElementById("chatbot-window");
-            const themeToggle = document.getElementById("theme-toggle");
-
-            chatbot.classList.toggle("dark-mode");
-            chatbot.classList.toggle("light-mode");
-
-            // Save user preference
-            if (chatbot.classList.contains("dark-mode")) {
-                localStorage.setItem("chatbot-theme", "dark");
-                themeToggle.textContent = "☀️";
-            } else {
-                localStorage.setItem("chatbot-theme", "light");
-                themeToggle.textContent = "🌙";
-            }
-        }
-
-        // Load theme on page load
-        window.addEventListener("load", () => {
-            const savedTheme = localStorage.getItem("chatbot-theme") || "light";
-            const chatbot = document.getElementById("chatbot-window");
-            const themeToggle = document.getElementById("theme-toggle");
-
-            chatbot.classList.remove("dark-mode", "light-mode");
-            chatbot.classList.add(savedTheme + "-mode");
-            themeToggle.textContent = savedTheme === "dark" ? "☀️" : "🌙";
-        });
-    </script>
+    <script src="src/assets/JS/chatbot.js"></script>
     <!-- ✅ External JS -->
     <script src="src/assets/JS/ai.js"></script>
 </body>
